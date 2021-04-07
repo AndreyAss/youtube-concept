@@ -3,7 +3,9 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .header {
@@ -13,6 +15,7 @@ body {
   padding-bottom: 20px;
   padding-left: 32px;
   padding-right: 70px;
+  margin-bottom: 30px;
   .menu-button {
     padding: 0;
     display: flex;
@@ -45,6 +48,7 @@ body {
     max-width: 830px;
     width: 50%;
     .input-search {
+      width: 100%;
       background-color: transparent;
       border: none;
       padding-top: 12px;
@@ -98,6 +102,53 @@ body {
   .user {
     margin-left: 45px;
     .user-avatar {
+    }
+  }
+}
+
+.container {
+  .sidebar {
+    padding-left: 32px;
+    .nav-menu {
+      margin-top: 0;
+      margin-bottom: 60px;
+      margin-left: 0;
+      list-style: none;
+      padding: 0;
+      .nav-item {
+        margin-bottom: 28px;
+
+        .nav-link {
+          color: #898989;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          &:hover {
+            color: red;
+            .icon {
+              fill: red;
+            }
+          }
+        }
+        .icon {
+          fill: #898989;
+        }
+      }
+      .nav-text {
+        margin-left: 13px;
+      }
+      .nav-image {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+      }
+    }
+    .nav-title {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 23px;
+      color: #000000;
+      margin-bottom: 30px;
     }
   }
 }
