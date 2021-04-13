@@ -201,21 +201,21 @@ body {
   width: 270px;
 }
 .container .swiper-slide.hard {
-  width: 540px;
-  height: 250px;
+  width: 100%;
+  height: 312px;
 }
-.container .video-card .video-thumb {
+.container .video-thumb {
   width: 100%;
   height: 150px;
   overflow: hidden;
   border-radius: 14px;
   position: relative;
 }
-.container .video-card .video-thumb.hard {
+.container .video-thumb.hard {
   width: 100%;
   height: 250px;
 }
-.container .video-card .video-thumb .video-duration {
+.container .video-thumb .video-duration {
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -227,16 +227,16 @@ body {
   color: #fff;
   padding: 3px 9px;
 }
-.container .video-card .video-thumb .thumbnail {
+.container .video-thumb .thumbnail {
   width: 100%;
   height: 150px;
   object-fit: cover;
 }
-.container .video-card .video-thumb .thumbnail.hard {
+.container .video-thumb .thumbnail.hard {
   width: 100%;
   height: 250px;
 }
-.container .video-card .video-title {
+.container .video-title {
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
@@ -244,10 +244,10 @@ body {
   margin-top: 10px;
   margin-bottom: 4px;
 }
-.container .video-card .video-counter {
+.container .video-counter {
   display: flex;
 }
-.container .video-card .video-info {
+.container .video-info {
   display: flex;
   justify-content: space-between;
   font-size: 13px;
@@ -255,13 +255,13 @@ body {
   color: #c2c2c2;
   width: 250px;
 }
-.container .video-card .video-info.block2 {
-  width: 540px;
+.container .video-info.block2 {
+  width: 100%;
 }
-.container .video-card .video-info .video-views {
+.container .video-info .video-views {
   margin-right: 5px;
 }
-.container .video-card .video-info .video-views::after {
+.container .video-info .video-views::after {
   content: "";
   width: 2px;
   height: 2px;
@@ -270,10 +270,12 @@ body {
   vertical-align: middle;
   margin-left: 5px;
 }
-.container .channel-button {
+
+.channel-button {
   cursor: pointer;
 }
-.container .slider-buttons {
+
+.slider-buttons {
   position: absolute;
   top: 12px;
   right: 8%;
@@ -282,10 +284,12 @@ body {
   justify-content: space-between;
   width: 67px;
 }
-.container .card-hard {
+
+.card-hard {
   width: 540px;
 }
-.container .block-3-1 {
+
+.block-3-1 {
   font-size: 16px;
   line-height: 20px;
   color: #c2c2c2;
@@ -293,33 +297,39 @@ body {
   align-items: center;
   margin-top: -19px;
 }
-.container .button-sub {
+
+.button-sub {
   width: 154px;
   height: 40px;
   padding: 10px 20px;
   background: #ff0000;
   border-radius: 20px;
 }
-.container .button-sub span {
+.button-sub span {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   color: #ffffff;
   text-decoration: none;
 }
-.container .channel-block3 {
+
+.channel-block3 {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-.container .channel-block3 .button-sub {
-  position: absolute;
-  top: 6px;
-  right: 200px;
+.channel-block3 .button-sub {
+  display: block;
+  margin-left: auto;
+  margin-right: 189px;
   text-decoration: none;
+  position: relative;
+  top: -10px;
+  height: auto;
+  text-align: center;
 }
-.container .channel-slider2 {
-  height: 305px;
+.channel-block3 .button-sub span {
+  height: auto;
 }
 
 .mobile-sidebar {
@@ -362,16 +372,14 @@ body {
     margin-left: 20px;
   }
 
-  .container .content {
-    padding-left: 32px;
-  }
-  .container .menu-button {
-    display: none;
-  }
-  .container .sidebar {
-    display: none;
+  .container .content .channel .channel-title {
+    min-width: 15%;
   }
 
+  .channel .block-3-1 {
+    margin-left: 27%;
+    margin-right: 6%;
+  }
   .channel .slider-buttons {
     display: none;
   }
@@ -382,11 +390,21 @@ body {
   }
 
   .swiper-slide {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .video-thumb {
     width: 300px;
+  }
+
+  .container .content {
+    padding-left: 32px;
+  }
+  .container .menu-button {
+    display: none;
+  }
+  .container .sidebar {
+    display: none;
   }
 
   .mobile-sidebar {
@@ -406,13 +424,21 @@ body {
     padding-top: 13px;
     padding-bottom: 11px;
     border-top: 1px solid #f1f1f1;
+    padding-left: 5px;
   }
   .mobile-sidebar .nav-menu .nav-item {
     margin-bottom: 0;
+    list-style: none;
   }
   .mobile-sidebar .nav-menu .nav-item .nav-link {
     display: flex;
     flex-direction: column;
+    color: #898989;
+    text-decoration: none;
+    align-items: center;
+  }
+  .mobile-sidebar .nav-menu .nav-item .nav-link .icon {
+    fill: #898989;
   }
   .mobile-sidebar .nav-menu .nav-item .nav-text {
     margin-left: 0;
